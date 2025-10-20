@@ -1,0 +1,334 @@
+/* Меню */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    /* вирівнювання по центру */
+    gap: 30px;
+    /* відстань між пунктами */
+    padding: 15px;
+    margin: 0;
+    background: #0077b6;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffd166;
+}
+
+/* Прайс-лист */
+.price-list {
+    width: 80%;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f1f1f1;
+    padding: 15px 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.price-row:hover {
+    background: #e0e0e0;
+}
+
+.price-row div:nth-child(1) {
+    flex: 2;
+    /* назва */
+    font-weight: bold;
+}
+
+.price-row div:nth-child(2) {
+    flex: 1;
+    /* ціна */
+    text-align: center;
+    color: #0077b6;
+    font-weight: bold;
+}
+
+.price-row div:nth-child(3) {
+    flex: 3;
+    /* опис */
+    font-size: 14px;
+    color: #444;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f5f7fa;
+    margin: 0;
+    /* padding: 50px 0; */
+}
+
+.price-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.price-card {
+    background: linear-gradient(145deg, #e0f7ff, #ffffff);
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 5px solid #0099ff;
+    position: relative;
+    overflow: hidden;
+}
+
+.price-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(0, 153, 255, 0.1);
+    border-radius: 40%;
+    animation: wave 6s infinite linear;
+}
+
+@keyframes wave {
+    0% {
+        transform: rotate(0deg) translateX(0);
+    }
+
+    50% {
+        transform: rotate(180deg) translateX(20px);
+    }
+
+    100% {
+        transform: rotate(360deg) translateX(0);
+    }
+}
+
+.price-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.price-card h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #222;
+    z-index: 1;
+    position: relative;
+}
+
+.price {
+    font-size: 28px;
+    color: #0099ff;
+    font-weight: bold;
+    margin: 10px 0;
+    z-index: 1;
+    position: relative;
+}
+
+.description {
+    color: #555;
+    font-size: 15px;
+    z-index: 1;
+    position: relative;
+}
+
+/*  */
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f5f7fa;
+    margin: 0;
+    /* padding: 50px 0; */
+}
+
+.price-list {
+    margin-top: 30px !important;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.price-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 5px solid #0099ff;
+}
+
+.price-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.price-card h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #222;
+}
+
+.price {
+    font-size: 28px;
+    color: #0099ff;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.description {
+    color: #555;
+    font-size: 15px;
+}
+
+.services {
+    text-align: center;
+    margin-top: 4%;
+    padding: 70px 10%;
+    background: linear-gradient(180deg, #b3ecff, #e6faff);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .services h2 {
+    font-size: 2.4rem;
+    color: #006d91;
+    margin-bottom: 60px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .services-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    margin: 0 auto;
+  }
+
+  /* Center image */
+  .center-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 260px;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  }
+
+  .center-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Service circles */
+  .service-circle {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    background: linear-gradient(135deg, #00bcd4, #0097a7);
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 15px rgba(0, 188, 212, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: breathe 3s infinite ease-in-out;
+    cursor: default;
+  }
+
+  @keyframes breathe {
+    0%,
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 15px rgba(0, 188, 212, 0.4);
+    }
+    50% {
+      transform: scale(1.08);
+      box-shadow: 0 0 35px rgba(0, 188, 212, 0.7);
+    }
+  }
+
+  /* Pulse animation */
+  @keyframes pulse {
+    0%,
+    100% {
+      box-shadow: 0 0 150px 5px rgba(0, 188, 212, 0.8);
+    }
+    50% {
+      box-shadow: 0 0 100px 10px rgba(0, 188, 212, 0.9);
+    }
+  }
+
+  /* Circle positions */
+  .circle1 {
+    top: -5%;
+    left: 43%;
+    transform: translateX(-50%);
+  }
+  .circle2 {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+  .circle3 {
+    bottom: -5%;
+    left: 43%;
+    transform: translateX(-50%);
+  }
+  .circle4 {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .services-container {
+      height: 400px;
+    }
+
+    .center-image {
+      width: 260px;
+      height: 170px;
+    }
+
+    .service-circle {
+      width: 90px;
+      height: 90px;
+      font-size: 0.9rem;
+      animation: none;
+    }
+
+    .circle1 {
+      top: 5%;
+    }
+    .circle3 {
+      bottom: 5%;
+    }
+  }
